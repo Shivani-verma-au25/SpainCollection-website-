@@ -1,0 +1,90 @@
+@font-face {
+    font-family: reg;
+    src: url(./Inter-Regular.ttf);
+}
+@font-face {
+    font-family: solo-light;
+    src: url(./SaolDisplay-Light.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+:root{
+    --text-color:rgb(102, 101, 101);
+    --nav-font-size:1.3vw;
+    --text-color:#D66A73;
+}
+#main{
+    overflow: hidden;
+}
+#page-1{
+    width: 100vw;
+    height: 100vh;
+    background-color: rebeccapurple;
+}
+/* ************ Nav **************** */
+nav{
+    width: 100vw;
+    height: 35vh;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: capitalize;
+}
+#nav-1{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 3vw; 
+}
+#nav-1 h5{
+    font-size: var(--nav-font-size);
+    font-family: reg;
+    font-weight: 100;
+    border-bottom: .1vw solid transparent;
+    transition: all ease .5s;
+
+}
+#nav-1 h5:nth-child(1){
+    border-bottom: .1vw solid var(--text-color);
+    color: var(--text-color);
+}
+#nav-2{
+    width: 10vw;
+    height: 20vh;
+    /* background-color: blanchedalmond; */
+    background-image: url(https://spaincollection.com/wp-content/themes/spaincollection/img/logo.svg);
+    background-repeat: no-repeat;
+    margin-top: 5vw;
+}
+#nav-3{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 3vw; 
+}
+#nav-3 h5{
+    font-size: var(--nav-font-size);
+    font-family: reg;
+    font-weight: 100;
+    transition: all ease .5s;
+}
+#nav-1 h5:hover,#nav-3 h5:hover{
+    color: var(--text-color);
+    cursor: pointer;
+    border-bottom: .1vw solid var(--text-color);
+}
+
+/* *************Page-2*************** */
+#page-2{
+    width: 100vw;
+    height: 100vh;
+    background-color: royalblue;
+}
