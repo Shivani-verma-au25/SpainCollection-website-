@@ -27,3 +27,50 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
 // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
 ScrollTrigger.refresh();
+
+
+// gsap
+
+let tl = gsap.timeline({
+  scrollTrigger:{
+    trigger:'#page-1',
+    scroller:'#main',
+    // markers:true,
+    start:'top -70%',
+    end:'top -170%',
+    scrub:5,
+    pin:true,
+  }
+})
+tl.to('#part-2',{
+  width:'1400vw',
+  // height:'200vh',
+  duration:1,
+},'amine')
+// tl.to('#part-2 h1',{
+//   y:'-300vh',
+//   // height:'200vh',
+//   duration:1,
+// },'amine')
+tl.to('#part-1',{
+  x:-300
+},'amine')
+tl.to('#part-3',{
+  x:300
+},'amine')
+tl.from('#image-container h1',{
+  y:300,
+})
+
+gsap.to('#main',{
+  backgroundColor:'#ffff',
+  scrollTrigger:{
+    trigger:'#page-3',
+    scroller:'#main',
+    // markers:true,
+    start:'top 10%',
+    end:'top -5%',
+    scrub:5,
+    pin:true,
+  }
+})

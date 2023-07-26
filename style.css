@@ -6,6 +6,18 @@
     font-family: solo-light;
     src: url(./SaolDisplay-Light.ttf);
 }
+@font-face {
+    font-family: solomid;
+    src: url(./SaolDisplay-Medium.woff2);
+}
+@font-face {
+    font-family: interbeta;
+    src: url(./Inter-LightBETA.woff2);
+}
+@font-face {
+    font-family: solo-italic;
+    src: url(./SaolDisplay-LightItalic.ttf);
+}
 *{
     padding: 0;
     margin: 0;
@@ -18,21 +30,25 @@ html,body{
 :root{
     --text-color:rgb(102, 101, 101);
     --nav-font-size:1.3vw;
-    --text-color:#D66A73;
+    /* --text-color:#D66A73; */
+    --text-color2:#BF1826;
+    --white:#ffff;
+    --black-color:black;
 }
 #main{
     overflow: hidden;
+    background-color: black;
 }
 #page-1{
     width: 100vw;
-    height: 100vh;
-    background-color: rebeccapurple;
+    min-height: 100vh;
+    background-color: var(--white);
 }
 /* ************ Nav **************** */
 nav{
     width: 100vw;
     height: 35vh;
-    background-color: yellow;
+    /* background-color: yellow; */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -81,10 +97,250 @@ nav{
     cursor: pointer;
     border-bottom: .1vw solid var(--text-color);
 }
+#page-1 p{
+    text-align: center;
+    font-family: solo-light;
+    font-weight: 100;
+    font-size: 2.7vw;
+    padding-inline: 20vw;
+}
+#page-1 h1{
+    text-align: center;
+    font-family: solo-italic;
+    font-weight:  100;  
+    font-size: 8vw;
+    line-height: 15vh;
+    padding-inline: 20vw;
+    text-transform: uppercase;
+    margin-top: 10vh;
+    position: absolute;
+    z-index: 10;
+}
+#image-container{
+    height: 100vh;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    margin-top: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+#image-container #part-1{
+    height: 100%;
+    width: 32%;
+    /* background-color: red; */
+    position: relative;
+}
+#part-1 video{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+#part-1 video:nth-child(1){
+    position: absolute;
+    top: 25%;
+    height: 350px;
+}
+#part-1 video:nth-child(2){
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    height: 240px;
+    width: 220px;
+}
+#part-1 video:nth-child(3){
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    height: 240px;
+    width: 220px;
+}
+#image-container #part-2{
+    height: 100%;
+    width: 32%;
+    /* background-color: rgb(60, 0, 255); */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#part-2 video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    
+}
+#image-container #part-3{
+    height: 100%;
+    width: 32%;
+    /* background-color: rgb(0, 255, 4); */
+    position: relative;
+}
+#part-3 video{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+#part-3 video:nth-child(1){
+    position: absolute;
+    top: 25%;
+    right: 0;
+    height: 350px;
+}
+#part-3 video:nth-child(2){
+    position: absolute;
+    top: 13%;
+    right: 50%;
+    height: 240px;
+    width: 220px;
+}
+#part-3 video:nth-child(3){
+    position: absolute;
+    top: 53%;
+    right: 50%;
+    height: 240px;
+    width: 220px;
+}
+
+#image-container>h1{
+    width: 80%;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%,0);
+    text-align: center;
+    position: absolute;
+    font-family: solo-light;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 6vw;
+    /* padding-inline: 25vw; */
+    font-weight: 100;
+    color: var(--white);
+    line-height: 12vh;
+}
+#image-container>h1 span{
+    color: var(--text-color2);
+    font-style: italic;
+}
+
+
 
 /* *************Page-2*************** */
 #page-2{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    background-color: royalblue;
+    background-color: var(--black-color);
+    position: relative;
+    padding: 20vh 0;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+#page-2 #video-container{
+    height: 60vh;
+    width: 50vw;
+    position: relative;
+    margin: 0 auto;
+}
+#page-2 #video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#page-2 #video-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0%;
+}
+#video-container #video-cover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.327);
+    /* opacity: .4; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#video-cover i{
+    color: white;
+    padding: 20px;
+    border: 2px solid wheat;
+    border-radius: 50%;
+}
+#page-2 h5{
+    color: #ffff;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: interbeta;
+}
+#page-2 h6{
+    color: #ffff;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 5px;
+    font-family: interbeta;
+}
+
+/* ***********Page-3************** */
+#page-3{
+    width: 100%;
+    height: 100vh;
+    /* background-color: rebeccapurple; */
+    padding: 10vh 0;
+}
+#page-3 h3{
+    color: var(--text-color2);
+    font-family: interbeta;
+    text-transform: capitalize;  
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center; 
+    letter-spacing: 1px; 
+}
+#page-3 #page-flex{
+    height: 70vh;
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.page3-elem{
+    width: 20%;
+    height: 80%;
+    /* background-color: green; */
+    position: relative;
+}
+.page3-elem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.page3-elem .page3-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #000000ad;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page3-overlay i{
+    padding: 20px;
+    border: 2px solid wheat;
+    border-radius: 50%;
+    font-size: 35px;
+    color: var(--white)
 }
