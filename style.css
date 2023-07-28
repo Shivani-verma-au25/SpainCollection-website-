@@ -344,3 +344,29 @@ nav{
     font-size: 35px;
     color: var(--white)
 }
+
+/* **************Page-4*************** */
+#page-4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rebeccapurple;
+}
+#page-4 h1{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 15vw;    
+    line-height: 14vw;
+    font-family: solomid;
+    font-weight: 200;
+    text-transform: uppercase;
+    width: 70%;
+}
+#page-4 h1 span{
+    /* font-style: italic; */
+    color: var(--text-color2);
+    font-size: 16vw;    
+    line-height: 14vw;
+    font-family: solo-italic;
+    font-weight: 200;
+    text-transform: uppercase;
+}
