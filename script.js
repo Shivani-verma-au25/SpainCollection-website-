@@ -35,33 +35,45 @@ let tl = gsap.timeline({
   scrollTrigger:{
     trigger:'#page-1',
     scroller:'#main',
-    // markers:true,
-    start:'top -70%',
-    end:'top -170%',
-    scrub:5,
+    markers:true,
+    start:'top -47%',
+    end:'500% -170%',
+    scrub:.1,
     pin:true,
   }
 })
-tl.to('#part-2',{
-  width:'1400vw',
-  // height:'200vh',
-  duration:1,
-},'amine')
-// tl.to('#part-2 h1',{
-//   y:'-300vh',
-//   // height:'200vh',
-//   duration:1,
-// },'amine')
 tl.to('#part-1',{
-  x:-300
+  x:'-300'
+},'amine')
+tl.to('#part-2',{
+  y:-130,
+  duration:.1,
+},'amine')
+tl.to('#part-2',{
+  width:'1800vw',
+  duration:2,
+},'amine')
+tl.to('#page-1 p,#page-1 #spain',{
+  y:'-100vh',
+  duration:1
 },'amine')
 tl.to('#part-3',{
-  x:300
+  x:'300'
+},'amine')
+tl.to('#part-1',{
+  x:'-300'
 },'amine')
 tl.from('#image-container h1',{
-  y:300,
-})
+  y:600,
+},'amine')
+tl.to('#part-2 h1',{
+  y:'-300vh',
+  duration:1,
+},'amine')
 
+// second
+
+// back ground color change
 gsap.to('#main',{
   backgroundColor:'#ffff',
   scrollTrigger:{
@@ -73,4 +85,19 @@ gsap.to('#main',{
     scrub:5,
     pin:true,
   }
+})
+
+//************** page-6 ******************
+gsap.to('#slide-2>h1',{
+  scrollTrigger:{
+    trigger:'#slide-2>h1',
+    scroller:'#main',
+    start:'70% 50%',
+    end:'100% 40%',
+    markers:true,
+    scrub:.15
+  },
+  backgroundColor:'green',
+  x:'-1000vw',
+  // duration:.1
 })
